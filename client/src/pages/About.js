@@ -2,6 +2,7 @@ import React from "react";
 import Wrapper from "../components/Wrapper.js";
 import PortfolioImage from "../components/PortfolioImage.js";
 import CardGroup from "../components/CardGroup.js";
+import EmploymentCard from "../components/EmploymentCard.js";
 
 function About()
 {
@@ -30,6 +31,7 @@ function About()
                     <div className="extra content">
                     </div>
                 </div>
+                <EmploymentCard />
             </CardGroup>
         </Wrapper>
     )
