@@ -20,3 +20,12 @@ class App extends Component {
 }
 
 export default App;
+
+
+/**
+ * USED TO PUSH ITEMS TO THE SIDE
+ * $('.ui.sidebar')
+  .sidebar('toggle')
+;
+
+ */
