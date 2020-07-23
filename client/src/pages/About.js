@@ -1,11 +1,12 @@
 import React from "react";
 import Wrapper from "../components/Wrapper.js";
+import PortfolioImage from "../components/PortfolioImage.js";
 
 function About()
 {
     return (
         <Wrapper>
-            <h1>Test</h1>
+            <PortfolioImage />
         </Wrapper>
     )
 };
