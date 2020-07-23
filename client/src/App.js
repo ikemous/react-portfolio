@@ -5,7 +5,10 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    return (null
+    return (
+      <Router>
+        <Route exact path="/" component={null} />
+      </Router>
     );
   }
 }
