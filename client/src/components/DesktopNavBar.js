@@ -15,13 +15,13 @@ function DesktopNavBar()
             <div className="collapse navbar-collapse" id="myMenu">
                 <ul className="navbar-nav mr-auto mt-2 mt-md-0">
                     <li className="nav-item">
-                        <Link className="nav-link navItem" to="/About"><i className="fas fa-diagnoses">About</i></Link>
+                        <Link className="nav-link navItem" to="/About"><i className="fas fa-diagnoses"></i>About</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link navItem" href="/Portfolio"><i className="fas fa-book-open"></i>Portfolio</Link>
+                        <Link className="nav-link navItem" to="/Portfolio"><i className="fas fa-book-open"></i>Portfolio</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link navItem" href="/Contact"><i className="fas fa-envelope-open"></i>Contact</Link>
+                        <Link className="nav-link navItem" to="/Contact"><i className="fas fa-envelope-open"></i>Contact</Link>
                     </li>
                 </ul>
             </div>
