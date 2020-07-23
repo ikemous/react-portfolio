@@ -1,9 +1,12 @@
 import React from "react";
+import Wrapper from "../components/Wrapper.js";
 
 function About()
 {
     return (
-        <h1>Test</h1>
+        <Wrapper>
+            <h1>Test</h1>
+        </Wrapper>
     )
 };
 

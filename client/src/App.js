@@ -12,7 +12,7 @@ class App extends Component {
       <Router>
         <MobileNavBar>
           <DesktopNavBar />
-          <Route exact path="/" component={About} />
+          <Route exact path="/About" component={About} />
         </MobileNavBar>
       </Router>
     );
