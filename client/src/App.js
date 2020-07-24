@@ -1,6 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { useState } from "react";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import MobileNavBar from "./components/MobileNavBar.js";
 import DesktopNavBar from "./components/DesktopNavBar.js";
 import About from "./pages/About.js";
@@ -12,18 +12,21 @@ function App()
 {
 
   const [page, setPage] = useState("About");
+  const [visible, setVisible] = useState(false);
 
 
   return (
     <Router>
-      <MobileNavBar>
-        <DesktopNavBar page={page} setPage={setPage}/>
-        <Route exact path="/About" component={About} />
-        <Route exact path="/Portfolio" component={Portfolio} />
-        <Route exact path="/Contact" component={Contact} />
+      <MobileNavBar visible={visible} setVisible={() => setVisible(false)}>
+        <DesktopNavBar page={page} setPage={setPage} setVisible={() => setVisible(true)}/>
+        <Switch>
+          <Route exact path="/About" component={About} />
+          <Route exact path="/Portfolio" component={Portfolio} />
+          <Route exact path="/Contact" component={Contact} />
+        </Switch>
       </MobileNavBar>
     </Router>
-  );
+  );  
 }
 
 export default App;

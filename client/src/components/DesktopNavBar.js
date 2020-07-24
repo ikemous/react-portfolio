@@ -1,11 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function DesktopNavBar({page, setPage})
+function DesktopNavBar({page, setPage, setVisible})
 {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-info">
-            <button className="navbar-toggler navbar-toggler-right" id="menu" type="button">
+            <button className="navbar-toggler navbar-toggler-right" onClick={setVisible} type="button" >
                 <span className="navbar-toggler-icon"></span>
             </button>
             <h1 className="navbar-toggler navHeader" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">{page}</h1>

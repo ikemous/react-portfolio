@@ -1,27 +1,41 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
 
-function MobileNavBar({children})
+function MobileNavBar({children,visible, setVisible})
 {
     return(
         <>
-            <aside className="ui left demo vertical inverted sidebar labeled icon menu">
-                <Link to="/About" className="item">
-                    <i className="id badge icon"></i>
-                    About
-                </Link>
-                <Link to="/Portfolio" className="item">
-                    <i className="book icon"></i>
-                    Portfolio
-                </Link>
-                <Link to="/Contact" className="item">
-                    <i className="phone volume icon"></i>
-                    Contact
-                </Link>
-            </aside>
-            <main className="pusher">
-                {children}
-            </main>
+            
+            <Sidebar.Pushable as={Segment}>
+                <Sidebar
+                    as={Menu}
+                    animation='overlay'
+                    icon='labeled'
+                    onHide={setVisible}
+                    inverted
+                    vertical
+                    visible={visible}
+                    width='thin'
+                >
+                    <Menu.Item as={Link} to="/about" onClick={setVisible}>
+                        <Icon name='user' />
+                        About
+                    </Menu.Item>
+                    <Menu.Item as={Link} to="/portfolio" onClick={setVisible}>
+                        <Icon name='book' />
+                        Games
+                    </Menu.Item>
+                    <Menu.Item as={Link} to="/contact" onClick={setVisible}>
+                        <Icon name='camera' />
+                        Channels
+                    </Menu.Item>
+                </Sidebar>
+
+                <Sidebar.Pusher dimmed={visible}>
+                    {children}
+                </Sidebar.Pusher>
+            </Sidebar.Pushable>
         </>
     );
     
