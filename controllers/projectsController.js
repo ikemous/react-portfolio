@@ -9,7 +9,7 @@ module.exports={
     },
     findByFilter({params}, res)
     {
-        db.Portfolio.findById({description: `/${params.filter}/`})
+        db.Portfolio.find({description: `/${params.filter}/`})
         .then(collection => res.json(collection))
         .catch(error => res.status(422).json(err));
     }
