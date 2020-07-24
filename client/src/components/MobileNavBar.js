@@ -24,7 +24,7 @@ function MobileNavBar({children,visible, setVisible, handleMobileClick})
                     <Icon name='book' />
                     Portfolio
                 </Menu.Item>
-                <Menu.Item as={Link} to="/contact" onClick={() => handleMobileClick("Portfolio", false)}>
+                <Menu.Item as={Link} to="/contact" onClick={() => handleMobileClick("Contact", false)}>
                     <Icon name='camera' />
                     Contact
                 </Menu.Item>
