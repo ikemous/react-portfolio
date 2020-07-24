@@ -1,12 +1,16 @@
 const express = require("express");
 const path = require("path");
+const projectRoutes = require("./routes/projectRoutes.js");
 const PORT = process.env.PORT || 3001;
 const server = express();
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   server.use(express.static("client/build"));
 }
+
+server.use(projectRoutes);
 
 // Send every request to the React app
 // Define any API routes before this runs
