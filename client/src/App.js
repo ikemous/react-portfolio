@@ -10,19 +10,17 @@ import "./App.css";
 
 function App()
 {
-
   const [page, setPage] = useState("About");
   const [visible, setVisible] = useState(false);
-
 
   return (
     <Router>
       <MobileNavBar visible={visible} setVisible={() => setVisible(false)}>
         <DesktopNavBar page={page} setPage={setPage} setVisible={() => setVisible(true)}/>
         <Switch>
-          <Route exact path="/About" component={About} />
-          <Route exact path="/Portfolio" component={Portfolio} />
-          <Route exact path="/Contact" component={Contact} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
       </MobileNavBar>
     </Router>
