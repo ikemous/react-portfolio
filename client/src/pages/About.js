@@ -12,11 +12,8 @@ function About()
             <Image src='/images/ikeMotorcyle.jpg' size='medium' circular centered/>
             <Card.Group>
                 <AboutMeCard />
-            </Card.Group>
-            {/* <CardGroup>
-                <AboutMeCard />
                 <EmploymentCard />
-            </CardGroup> */}
+            </Card.Group>
         </Wrapper>
     )
 };
