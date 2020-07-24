@@ -5,10 +5,10 @@ import {Container, Card} from "semantic-ui-react";
 
 function Portfolio()
 {
-    const [filter, setFilter] = useState("all");
+    const [filter, setFilter] = useState();
 
     useEffect(() => {
-        API.getProjects()
+        API.getProjects(filter)
         .then(collections => {
             console.log(collections.data)
         })
@@ -16,7 +16,7 @@ function Portfolio()
     }, [filter]);
     return (
         <Container>
-            <Form />
+            <Form setFilter={setFilter}/>
             <Card.Group>
 
             </Card.Group>

@@ -2,7 +2,7 @@ import React from "react";
 import {Dropdown} from "semantic-ui-react";
 
 const options = [
-    { key: 'All', text: 'Show All', value: 'All' },
+    { key: 'All', text: 'Show All', value: '' },
     { key: 'React', text: 'React', value: 'React' },
     { key: 'CSS', text: 'CSS', value: 'CSS' },
     { key: 'HTML', text: 'HTML', value: 'HTML' },
@@ -15,7 +15,7 @@ const options = [
     { key: 'API', text: 'API', value: 'API'}
 ]
 
-function Form()
+function Form({setFilter})
 {
     return (
         <Dropdown
@@ -28,7 +28,7 @@ function Form()
         >
             <Dropdown.Menu>
                 <Dropdown.Header icon='tags' content='Filter by skill' />
-                {options.map(option => <Dropdown.Item key={option.key} value={option.value}>{option.text}</Dropdown.Item>)}
+                {options.map(option => <Dropdown.Item key={option.key} value={option.value} onClick={() => setFilter(option.value)}>{option.text}</Dropdown.Item>)}
             </Dropdown.Menu>
         </Dropdown>
     );
