@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const projectsController = require("../controllers/projectsController.js");
 
-router.route("/Portfolio")
+router.route("/portfolio")
     .get(projectsController.findAll);
 
-router.route("/Portfolio/:filter")
+router.route("/portfolio/:filter")
     .get(projectsController.findByFilter);
 
 module.exports = router;

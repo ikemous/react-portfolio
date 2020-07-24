@@ -1,6 +1,8 @@
 const express = require("express");
+const compression = require("compression");
+const mongoose = require("mongoose");
 const path = require("path");
-const projectRoutes = require("./routes/projectRoutes.js");
+const projectRoutes = require("./routes/projectRoutes");
 const PORT = process.env.PORT || 3001;
 const server = express();
 
@@ -10,6 +12,13 @@ if (process.env.NODE_ENV === "production") {
   server.use(express.static("client/build"));
 }
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project")
+
+// Allow server to use params
+server.use(express.urlencoded({ extended: true }));
+server.use(express.json());
+
+server.use(compression());
 server.use(projectRoutes);
 
 // Send every request to the React app
