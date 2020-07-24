@@ -18,7 +18,7 @@ function App()
       <MobileNavBar visible={visible} setVisible={() => setVisible(false)}>
         <DesktopNavBar page={page} setPage={setPage} setVisible={() => setVisible(true)}/>
         <Switch>
-          <Route exact path="/about" component={About} />
+          <Route exact path={['/','/about']} component={About} />
           <Route exact path="/portfolio" component={Portfolio} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
