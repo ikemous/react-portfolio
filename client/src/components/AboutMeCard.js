@@ -1,29 +1,32 @@
 import React from "react";
+import {Card, CardContent, Icon} from "semantic-ui-react";
 
 function AboutMeCard()
 {
     return (
-        <div className="ui fluid card">
-            <div className="content">
-                <div className="center aligned header"><h2>Adrian Ike Barranco</h2></div>
-                <div className="center aligned description">
-                    <p>
-                        Variety IT specialist with over two years of experience in System Administration, Network Administration, CNOC Monitoring, troubleshooting 
-                        and various coding languages. Trained to and deployed Cisco devices while deployed with the Utah Army National Guard. Currently going through 
-                        Trilogies Coding bootcamp and Harvards introduction to computer science class.
-                    </p>
-                </div>
-                </div>
-                <div className="center aligned header">Resume</div>
-                <div className="extra content">
-                    <div className="center aligned">
-                        <a href="/files/resume.pdf" rel="noopener noreferrer" target="_blank" className="col-sm-6"><i className="fas fa-file-pdf"></i>  PDF</a>
-                        <a href="/files/Resume.docx" rel="noopener noreferrer" target="_blank" className="col-sm-6"><i className="fas fa-file-word"></i>  Word</a>
-                    </div>
-            </div>  
-            <div className="extra content">
-            </div>
-        </div>
+        <Card fluid>
+            <Card.Header as="h2" textAlign="center">Adrian Ike Barranco</Card.Header>
+            <Card.Content>
+                <Card.Description>
+                    Variety IT specialist with over two years of experience in System Administration, Network Administration, CNOC Monitoring, troubleshooting 
+                    and various coding languages. Trained to and deployed Cisco devices while deployed with the Utah Army National Guard. Currently going through 
+                    Trilogies Coding bootcamp and Harvards introduction to computer science class.
+                </Card.Description>
+            </Card.Content>
+            <CardContent>
+                <Card.Header as="header" textAlign="center">Resume</Card.Header>
+                <Card.Content extra textAlign="center">
+                    <a href="/files/resume.pdf" rel="noopener noreferrer" target="_blank">
+                        <Icon name="file pdf" size="large"/>
+                        Adobe PDF
+                    </a>
+                    <a href="/files/resume.docx">
+                        <Icon name="file word" size="large"/>
+                        Microsoft Word
+                    </a>
+                </Card.Content>
+            </CardContent>
+        </Card>
     )
 };
 
