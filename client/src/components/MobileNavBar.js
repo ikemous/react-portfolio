@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
 
-function MobileNavBar({children,visible, setVisible, handleMobileClick})
+function MobileNavBar({children, visible, setVisible, handleMobileClick})
 {
     return(
         <Sidebar.Pushable as={Segment}>
