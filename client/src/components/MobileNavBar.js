@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {Icon, Menu, Segment, Sidebar } from 'semantic-ui-react'
 
-function MobileNavBar({children,visible, setVisible})
+function MobileNavBar({children,visible, setVisible, handleMobileClick})
 {
     return(
         <Sidebar.Pushable as={Segment}>
@@ -16,15 +16,15 @@ function MobileNavBar({children,visible, setVisible})
                 visible={visible}
                 width='thin'
             >
-                <Menu.Item as={Link} to="/about" onClick={setVisible}>
+                <Menu.Item as={Link} to="/about" onClick={() => handleMobileClick("About", false)}>
                     <Icon name='user' />
                     About
                 </Menu.Item>
-                <Menu.Item as={Link} to="/portfolio" onClick={setVisible}>
+                <Menu.Item as={Link} to="/portfolio" onClick={() => handleMobileClick("Portfolio", false)}>
                     <Icon name='book' />
                     Portfolio
                 </Menu.Item>
-                <Menu.Item as={Link} to="/contact" onClick={setVisible}>
+                <Menu.Item as={Link} to="/contact" onClick={() => handleMobileClick("Portfolio", false)}>
                     <Icon name='camera' />
                     Contact
                 </Menu.Item>

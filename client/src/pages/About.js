@@ -1,8 +1,7 @@
 import React from "react";
-import Wrapper from "../components/Wrapper.js";
-import CardGroup from "../components/CardGroup.js";
-import EmploymentCard from "../components/EmploymentCard.js";
-import AboutMeCard from "../components/AboutMeCard.js";
+import Wrapper from "../components/aboutComponents/Wrapper.js";
+import EmploymentCard from "../components/aboutComponents/EmploymentCard.js";
+import AboutMeCard from "../components/aboutComponents/AboutMeCard.js";
 import {Image, Card} from "semantic-ui-react";
 
 function About()
@@ -12,7 +11,7 @@ function About()
             <Image src='/images/ikeMotorcyle.jpg' size='medium' circular centered/>
             <Card.Group>
                 <AboutMeCard />
-                <EmploymentCard />
+                <EmploymentCard />  
             </Card.Group>
         </Wrapper>
     )

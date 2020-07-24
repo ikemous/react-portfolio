@@ -13,9 +13,14 @@ function App()
   const [page, setPage] = useState("About");
   const [visible, setVisible] = useState(false);
 
+  const handleMobileClick = (pageName, visibility) => {
+    setPage(pageName);
+    setVisible(visibility);
+  }
+
   return (
     <Router>
-      <MobileNavBar visible={visible} setVisible={() => setVisible(false)}>
+      <MobileNavBar visible={visible} setVisible={() => setVisible(false)} handleMobileClick={handleMobileClick}>
         <DesktopNavBar page={page} setPage={setPage} setVisible={() => setVisible(true)}/>
         <Switch>
           <Route exact path={['/','/about']} component={About} />
