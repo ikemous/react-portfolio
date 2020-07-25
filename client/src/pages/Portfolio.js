@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/portfolioComponents/ProjectCard.js";
 import API from "../utils/API.js";
-import Form from "../components/portfolioComponents/Form.js";
+import Dropdown from "../components/portfolioComponents/Dropdown.js";
 import {Container, Card} from "semantic-ui-react";
 
 function Portfolio()
@@ -20,7 +20,7 @@ function Portfolio()
 
     return (
         <Container>
-            <Form setFilter={setFilter}/>
+            <Dropdown setFilter={setFilter}/>
             <Card.Group>
                 {projects.map(project => <ProjectCard key={project._id} {...project} />)}
             </Card.Group>

@@ -11,7 +11,7 @@ const options = [
     { key: 'Node', text: 'Node', value: 'Node' },
     { key: 'MySQL', text: 'MySQL', value: 'MySQL' },
     { key: 'MongoDB', text: 'MongoDB', value: 'MongoDB' },
-    { key: 'Handlebars', text: 'Handlebars', value: 'handlebars' },
+    { key: 'Handlebars', text: 'Handlebars', value: 'Handlebars' },
     { key: 'Project', text: 'Group Project', value: 'Project' },
     { key: 'API', text: 'API', value: 'API'}
 ]
