@@ -11,10 +11,10 @@ function ProjectCard({imageURL, title, description, skills, githubURL, deployedU
                 <Card.Meta>{skills}</Card.Meta>
                 <Card.Description>{description}</Card.Description>
                 <Card.Content>
-                    <a href={githubURL}><Icon name="code"></Icon>Code Repository</a>
+                    <a href={githubURL} rel="noopener noreferrer" target="_blank"><Icon name="code"></Icon>Code Repository</a>
                 </Card.Content>
                 <Card.Content>
-                    <a href={deployedURL}><Icon name="world"></Icon>Deployed Application</a>
+                    <a href={deployedURL} rel="noopener noreferrer" target="_blank"><Icon name="world"></Icon>Deployed Application</a>
                 </Card.Content>
             </Card.Content>
         </Card>

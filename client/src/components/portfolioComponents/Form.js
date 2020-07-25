@@ -29,7 +29,7 @@ function Form({setFilter})
         >
             <Dropdown.Menu>
                 <Dropdown.Header icon='tags' content='Filter by skill' />
-                {options.map(option => <Dropdown.Item as={Link} key={option.key} value={option.value} onClick={() => setFilter(option.value)}>{option.text}</Dropdown.Item>)}
+                {options.map(option => <Dropdown.Item key={option.key} value={option.value} onClick={() => setFilter(option.value)}>{option.text}</Dropdown.Item>)}
             </Dropdown.Menu>
         </Dropdown>
     );

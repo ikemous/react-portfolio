@@ -23,7 +23,7 @@ function Portfolio()
         <Container>
             <Form setFilter={setFilter}/>
             <Card.Group>
-                {projects.map(project => <ProjectCard {...project}/>)}
+                {projects.map(project => <ProjectCard key={project._id} {...project}/>)}
             </Card.Group>
         </Container>
     );

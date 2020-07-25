@@ -20,7 +20,7 @@ function AboutMeCard()
                         <Icon name="file pdf" size="large"/>
                         Adobe PDF
                     </a>
-                    <a href="/files/resume.docx">
+                    <a href="/files/resume.docx" rel="noopener noreferrer" target="_blank">
                         <Icon name="file word" size="large"/>
                         Microsoft Word
                     </a>
