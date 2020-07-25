@@ -13,7 +13,6 @@ function Portfolio()
         API.getProjects(filter)
         .then(collections => {
             setProjects(collections.data);
-            console.log(projects);
         })
         .catch(error => console.log(error));
     }, [filter]);

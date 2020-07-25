@@ -1,21 +1,25 @@
 import React from "react";
 import {Card, Image, Icon} from "semantic-ui-react";
 
-function ProjectCard({imageURL, title, description, skills, githubURL, deployedURL})
+function ProjectCard({imageRoute, title, description, skills, githubURL, deployedURL})
 {
     return (
         <Card>
-            <Image src={imageURL || "https://via.placeholder.com/150"} wrapped ui={false} />
+            <Image style={{height: "290px", width: "290px"}} src={imageRoute || "https://via.placeholder.com/150"} />
             <Card.Content>
                 <Card.Header>{title}</Card.Header>
                 <Card.Meta>{skills}</Card.Meta>
                 <Card.Description>{description}</Card.Description>
-                <Card.Content>
+                <Card.Content>  
                     <a href={githubURL} rel="noopener noreferrer" target="_blank"><Icon name="code"></Icon>Code Repository</a>
                 </Card.Content>
-                <Card.Content>
-                    <a href={deployedURL} rel="noopener noreferrer" target="_blank"><Icon name="world"></Icon>Deployed Application</a>
-                </Card.Content>
+                {(deployedURL)?
+                    <Card.Content>
+                        <a href={deployedURL} rel="noopener noreferrer" target="_blank"><Icon name="world"></Icon>Deployed Application</a>
+                    </Card.Content>
+                    :
+                    (<p><Icon name="frown outline" />No Deployed URL</p>)
+                }
             </Card.Content>
         </Card>
     );
