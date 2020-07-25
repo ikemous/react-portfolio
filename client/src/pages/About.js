@@ -7,7 +7,7 @@ function About()
 {
     return (
         <Container>
-            <Image src='/images/ikeMotorcyle.jpg' size='medium' circular centered/>
+            <Image src='/images/ikeMotorcyle.jpg' size='medium' alt="Ikemous posing for his portfolio page" circular centered/>
             <Card.Group>
                 <AboutMeCard />
                 <EmploymentCard />  

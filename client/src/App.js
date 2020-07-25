@@ -1,5 +1,5 @@
 /* eslint-disable react/prefer-stateless-function */
-import React, { useState, Suspense } from "react";
+import React, { useState } from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import MobileNavBar from "./components/MobileNavBar.js";
 import DesktopNavBar from "./components/DesktopNavBar.js";
