@@ -11,18 +11,19 @@ const stringObj = {
     trim: true
 }
 
-const PortfolioSchema = new Schema(
+const ProjectSchema = new Schema(
     {
         createdDate: dateObj,
         updatedDate: dateObj,
         title: stringObj,
         description: stringObj,
+        skills: stringObj,
         imageRoute: stringObj,
         githubURL: stringObj,
         deployedURL: stringObj
     }
 );
 
-const Portfolio = mongoose.model("Portfolio", PortfolioSchema);
+const Project = mongoose.model("Project", ProjectSchema);
 
-module.exports = Portfolio;
+module.exports = Project;

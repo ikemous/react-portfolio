@@ -1,3 +1,3 @@
 module.exports = {
-    Portfolio: require("./projects.js")
+    Project: require("./projects.js")
 };

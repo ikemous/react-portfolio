@@ -12,7 +12,11 @@ if (process.env.NODE_ENV === "production") {
   server.use(express.static("client/build"));
 }
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/project")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/projects");
+
+mongoose.connection.on('connected', () => {
+  console.log("connected");
+});
 
 // Allow server to use params
 server.use(express.urlencoded({ extended: true }));
