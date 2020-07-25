@@ -5,14 +5,13 @@ import {List, Segment} from "semantic-ui-react";
 function SocialList()
 {
     return (
-        <Segment textAlign='center' basic fluid>
-            <List size="big" horizontal fluid>
-                <SocialItem name="facebook square" color="blue" socialName="/Ikemous" />
-                <SocialItem name="github square" color="blue" socialName="/Ikemous" />
-                <SocialItem name="twitter square" color="blue" socialName="/Ikemous" />
-                <SocialItem name="linkedin" color="blue" socialName="/Ike-Barranco" />
+        <Segment textAlign='center' basic>
+            <List size="big" horizontal>
+                <SocialItem name="facebook square" color="blue" socialName="/Ikemous" link="https://www.facebook.com/ikemous" />
+                <SocialItem name="github square" color="blue" socialName="/Ikemous" link="https://github.com/ikemous"/>
+                <SocialItem name="twitter square" color="blue" socialName="/Ikemous" link="https://twitter.com/real_ikemous"/>
+                <SocialItem name="linkedin" color="blue" socialName="/Ike-Barranco" link="https://www.linkedin.com/in/ike-barranco/"/>
             </List>
-    
         </Segment>
         
     )
