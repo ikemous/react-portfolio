@@ -18,7 +18,7 @@ function ProjectCard({imageRoute, title, description, skills, githubURL, deploye
                         <a href={deployedURL} rel="noopener noreferrer" target="_blank"><Icon name="world"></Icon>Deployed Application</a>
                     </Card.Content>
                     :
-                    (<p><Icon name="frown outline" />No Deployed URL</p>)
+                    <p><Icon name="frown outline"></Icon>No Deployed URL</p>
                 }
             </Card.Content>
         </Card>
