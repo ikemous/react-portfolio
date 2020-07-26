@@ -17,11 +17,11 @@ function AboutMeCard()
                 <Card.Header as="header" textAlign="center">Resume</Card.Header>
                 <Card.Content extra textAlign="center">
                     <a href="/files/resume.pdf" rel="noopener noreferrer" target="_blank">
-                        <Icon name="file pdf" size="large"/>
+                        <Icon name="file pdf" size="large" color="red"/>
                         Adobe PDF
                     </a>
                     <a href="/files/resume.docx" rel="noopener noreferrer" target="_blank">
-                        <Icon name="file word" size="large"/>
+                        <Icon name="file word" size="large" color="blue"/>
                         Microsoft Word
                     </a>
                 </Card.Content>
