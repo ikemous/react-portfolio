@@ -16,6 +16,9 @@ function MobileNavBar({children, visible, setVisible, handleMobileClick})
                 visible={visible}
                 width='thin'
             >
+                <Menu.Item>
+                    Navigation
+                </Menu.Item>
                 <Menu.Item as={Link} to="/about" onClick={() => handleMobileClick("About", false)}>
                     <Icon name='user' />
                     About
@@ -29,7 +32,6 @@ function MobileNavBar({children, visible, setVisible, handleMobileClick})
                     Contact
                 </Menu.Item>
             </Sidebar>
-
             <Sidebar.Pusher dimmed={visible}>
                 {children}
             </Sidebar.Pusher>
