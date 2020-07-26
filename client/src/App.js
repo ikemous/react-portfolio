@@ -25,7 +25,7 @@ function App()
         <DesktopNavBar page={page} setPage={setPage} setVisible={() => setVisible(true)}/>
         <Switch>
           <Route exact path={['/','/about']} component={About} />
-          <Route exact path={["/portfolio", "/portfolio/:filter"]} component={Portfolio} />
+          <Route exact path={["/portfolio", "/portfolio/:filterParam"]} component={Portfolio} />
           <Route exact path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>

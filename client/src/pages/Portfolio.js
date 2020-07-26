@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {useParams} from "react-router-dom";
 import ProjectCard from "../components/portfolioComponents/ProjectCard.js";
 import API from "../utils/API.js";
 import Dropdown from "../components/portfolioComponents/Dropdown.js";
@@ -8,9 +9,15 @@ function Portfolio()
 {
     const [filter, setFilter] = useState("");
     const [projects, setProjects] = useState([]);
+    const {filterParam} = useParams();
 
     useEffect(() => {
-        API.getProjects(filter)
+        let query = filter;
+        
+        if(filterParam)
+            query = filterParam
+
+        API.getProjects(query)
         .then(collections => {
             setProjects(collections.data);
         })
@@ -22,7 +29,7 @@ function Portfolio()
         <Container>
             <Dropdown setFilter={setFilter}/>
             <Card.Group>
-                {projects.map(project => <ProjectCard key={project._id} {...project} />)}
+                {(projects)?projects.map(project => <ProjectCard key={project._id} {...project} />):<h2>No Projects Found</h2>}
             </Card.Group>
         </Container>
     );
