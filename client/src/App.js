@@ -6,6 +6,7 @@ import DesktopNavBar from "./components/DesktopNavBar.js";
 import About from "./pages/About.js";
 import Portfolio from "./pages/Portfolio.js";
 import Contact from "./pages/Contact.js";
+import NotFound from "./pages/Notfound.js";
 import "./App.css";
 
 function App()
@@ -26,6 +27,7 @@ function App()
           <Route exact path={['/','/about']} component={About} />
           <Route exact path={["/portfolio", "/portfolio/:filter"]} component={Portfolio} />
           <Route exact path="/contact" component={Contact} />
+          <Route component={NotFound} />
         </Switch>
       </MobileNavBar>
     </Router>
