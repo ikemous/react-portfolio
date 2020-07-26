@@ -1,5 +1,4 @@
 import React from "react";
-import Contact from "../../pages/Contact";
 import {Card, Grid, Segment, Icon} from "semantic-ui-react";
 
 function ContactCard()

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 function DesktopNavBar({page, setPage, setVisible})
 {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-info">
+        <nav className="navbar navbar-expand-lg navbar-light">
             <button className="navbar-toggler navbar-toggler-right" onClick={setVisible} type="button" >
                 <span className="navbar-toggler-icon"></span>
             </button>

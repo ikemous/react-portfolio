@@ -25,4 +25,4 @@ function ProjectCard({imageRoute, title, description, skills, githubURL, deploye
     );
 };
 
-export default ProjectCard;
+export default ProjectCard; 

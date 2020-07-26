@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {Image, Segment} from "semantic-ui-react";
+import {Segment} from "semantic-ui-react";
 
 function NotFound()
 {
