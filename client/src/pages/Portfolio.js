@@ -12,6 +12,10 @@ function Portfolio()
     const {filterParam} = useParams();
 
     useEffect(() => {
+        document.title = "Ikemous - Portfolio"
+    });
+    
+    useEffect(() => {
         let query = filter;
         
         if(filterParam)

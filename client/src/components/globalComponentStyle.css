@@ -19,7 +19,7 @@ nav button{
 }
 
 .pushable{
-    padding-bottom: 50px;
+    padding-bottom: 50px!important;
 }
 
 body ::-webkit-scrollbar-thumb{

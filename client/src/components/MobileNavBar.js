@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {Icon, Menu, Sidebar } from 'semantic-ui-react'
+import {Icon, Menu, Sidebar } from 'semantic-ui-react';
+import "./globalComponentStyle.css";
 
 function MobileNavBar({children, visible, setVisible, handleMobileClick})
 {

@@ -1,9 +1,13 @@
-import React, {Suspense} from "react";
+import React, {Suspense, useEffect} from "react";
 import {Loader, Dimmer} from "semantic-ui-react";
 const App = React.lazy(() => import("./App.js"));
 
 function LazyLoading()
 {
+    useEffect(() =>{
+        document.title = "Ikemous - Loading"
+    },[]);
+
     return (
         <Suspense fallback={
             <Dimmer active>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import MobileNavBar from "./components/MobileNavBar.js";
 import DesktopNavBar from "./components/DesktopNavBar.js";
@@ -9,9 +9,9 @@ import NotFound from "./pages/Notfound.js";
 
 function App()
 {
-  const [page, setPage] = useState("About");
+  const [page, setPage] = useState();
   const [visible, setVisible] = useState(false);
-
+  
   const handleMobileClick = (pageName, visibility) => {
     setPage(pageName);
     setVisible(visibility);
