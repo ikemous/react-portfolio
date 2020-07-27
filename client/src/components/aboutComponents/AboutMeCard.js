@@ -10,7 +10,7 @@ function AboutMeCard()
                 <Card.Description>
                     Variety IT specialist with over two years of experience in System Administration, Network Administration, CNOC Monitoring, 
                     troubleshooting and various coding languages. Trained to and deployed Cisco devices while deployed with the Utah Army 
-                    National Guard. While in college i've completed multiple classes in programming which included HTML, CSS, C#, C++, and SEO. 
+                    National Guard. While in college I've completed multiple classes in programming which included HTML, CSS, C#, C++, and SEO. 
                     I've also completed Trilogies Coding Bootcamp hosted by the University of Utah. Technologies covered by this course are: HTML,
                     CSS, JavaScript, jQuery, Bootstrap, APIs, MySQL, Handlebars, Node, Express, MongoDB, and React.
                 </Card.Description>
