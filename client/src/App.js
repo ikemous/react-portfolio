@@ -16,7 +16,6 @@ function App()
     let firstLocation = window.location.pathname;
     firstLocation = firstLocation.split('/')[1];
     firstLocation = firstLocation[0].toUpperCase() + firstLocation.slice(1);
-    console.log(firstLocation);  
     switch(firstLocation)
     {
       case "About":
