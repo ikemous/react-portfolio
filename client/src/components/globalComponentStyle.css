@@ -1,17 +1,27 @@
 nav{
-    margin: 20px;
+    margin: 15px;
+    margin-top: 0px;
     margin-left: 5px;
     color: #4183c4!important;
 }
-
-.navItem{
+nav button{
+    background-color:#4183c4!important;
+}
+.navItem, nav h1{
     color: #4183c4!important;
 }
 .nav-item.active{
     font-size: 19px!important;
 }
 
-
 .ui.fluid.card, .ui.card{
     background-color: #F1BF98!important;
+}
+
+.pushable{
+    padding-bottom: 50px;
+}
+
+body ::-webkit-scrollbar-thumb{
+    background-color:#4183c4!important
 }

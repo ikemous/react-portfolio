@@ -28,7 +28,7 @@ function MobileNavBar({children, visible, setVisible, handleMobileClick})
                     Portfolio
                 </Menu.Item>
                 <Menu.Item as={Link} to="/contact" onClick={() => handleMobileClick("Contact", false)}>
-                    <Icon name='camera' />
+                    <Icon name='phone' />
                     Contact
                 </Menu.Item>
             </Sidebar>
