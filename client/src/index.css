@@ -2,20 +2,3 @@
     height: 100%;
     background-color:#13293D;
 }
-
-.ui.fluid.card, .ui.card{
-    background-color: #F1BF98!important;
-}
-
-nav{
-    margin: 20px;
-    margin-left: 5px;
-    color: #4183c4!important;
-}
-
-.navItem{
-    color: #4183c4!important;
-}
-.nav-item.active{
-    font-size: 19px!important;
-}
