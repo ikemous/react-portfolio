@@ -1,5 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {Header} from "semantic-ui-react";
+import "./globalComponentStyle.css";
 
 function DesktopNavBar({page, setPage, setVisible})
 {
@@ -12,13 +14,13 @@ function DesktopNavBar({page, setPage, setVisible})
             <div className="collapse navbar-collapse" id="myMenu">
                 <ul className="navbar-nav mr-auto mt-2 mt-md-0">
                     <li className={(page==="About")?"nav-item active": "nav-item"}  onClick={() => setPage("About")}>
-                        <Link className="nav-link navItem" to="/about"><i className="fas fa-diagnoses"></i>About</Link>
+                        <Header className="nav-link navItem" as={Link} to="/about" content="About" icon="user" />
                     </li>
                     <li className={(page==="Portfolio")?"nav-item active": "nav-item"} onClick={() => setPage("Portfolio")}>
-                        <Link className="nav-link navItem" to="/portfolio"><i className="fas fa-book-open"></i>Portfolio</Link>
+                        <Header className="nav-link navItem" as={Link} to="/portfolio" content="Portfolio" icon="book" />
                     </li>
                     <li className={(page==="Contact")?"nav-item active": "nav-item"}  onClick={() => setPage("Contact")}>
-                        <Link className="nav-link navItem" to="/contact"><i className="fas fa-envelope-open"></i>Contact</Link>
+                        <Header className="nav-link navItem" as={Link} to="/contact" content="Contact" icon="phone" />
                     </li>
                 </ul>
             </div>
