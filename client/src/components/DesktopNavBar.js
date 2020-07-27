@@ -13,15 +13,15 @@ function DesktopNavBar({page, setPage, setVisible})
             <Header as="h1" className="navbar-toggler" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" content={page} />
             <div className="collapse navbar-collapse" id="myMenu">
                 <ul className="navbar-nav mr-auto mt-2 mt-md-0">
-                    <li className={(page==="About")?"nav-item active": "nav-item"}  onClick={() => setPage("About")}>
-                        <Header className="nav-link navItem" as={Link} to="/about" content="About" icon="user" />
-                    </li>
-                    <li className={(page==="Portfolio")?"nav-item active": "nav-item"} onClick={() => setPage("Portfolio")}>
-                        <Header className="nav-link navItem" as={Link} to="/portfolio" content="Portfolio" icon="book" />
-                    </li>
-                    <li className={(page==="Contact")?"nav-item active": "nav-item"}  onClick={() => setPage("Contact")}>
-                        <Header className="nav-link navItem" as={Link} to="/contact" content="Contact" icon="phone" />
-                    </li>
+                    <Link to="/about" className={(page==="About")?"nav-item active": "nav-item"}  onClick={() => setPage("About")}>
+                        <Header className="nav-link navItem" content="About" icon="user" />
+                    </Link>
+                    <Link to="/portfolio" className={(page==="Portfolio")?"nav-item active": "nav-item"} onClick={() => setPage("Portfolio")}>
+                        <Header className="nav-link navItem" content="Portfolio" icon="book" />
+                    </Link>
+                    <Link to="/contact" className={(page==="Contact")?"nav-item active": "nav-item"}  onClick={() => setPage("Contact")}>
+                        <Header className="nav-link navItem" content="Contact" icon="phone" />
+                    </Link>
                 </ul>
             </div>
 
