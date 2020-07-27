@@ -1,6 +1,6 @@
 import React from "react";
 import IconHeader from "../IconHeader.js";
-import {Card, Grid, Segment, Icon, Header} from "semantic-ui-react";
+import {Card, Grid, Segment, Header} from "semantic-ui-react";
 
 function ContactCard()
 {
@@ -26,7 +26,7 @@ function ContactCard()
                     <Grid.Column  mobile={16} tablet={8} computer={5}>
                         <IconHeader name="mail" size="big" text="Email" />
                         <Segment textAlign="center" basic>
-                        <Header as="a" size="big" content="barranco.ike@gmail.com" href="mailto:barranco.ike@gmail.com?subject=Email%20Regarding%20Portfolio" color="blue" />
+                        <Header as="a" content="barranco.ike@gmail.com" href="mailto:barranco.ike@gmail.com?subject=Email%20Regarding%20Portfolio" color="blue" />
                         </Segment>
                     </Grid.Column>
                 </Grid>
