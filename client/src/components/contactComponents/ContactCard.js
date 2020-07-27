@@ -1,5 +1,6 @@
 import React from "react";
-import {Card, Grid, Segment, Icon} from "semantic-ui-react";
+import IconHeader from "../IconHeader.js";
+import {Card, Grid, Segment, Icon, Header} from "semantic-ui-react";
 
 function ContactCard()
 {
@@ -9,7 +10,7 @@ function ContactCard()
             <Card.Content>
                 <Grid container>
                     <Grid.Column  mobile={16} tablet={8} computer={5}>
-                        <Segment textAlign="center" basic><Icon name="clock" size="big" />Contact Times MST</Segment>
+                        <IconHeader name="clock" size="big" text="Contact Times MST" />
                         <Segment textAlign="center" basic>
                             <h3>Sun-Mon</h3>
                             <p>6:30 AM - 8:30 AM</p>
@@ -19,12 +20,14 @@ function ContactCard()
                         </Segment>
                     </Grid.Column>
                     <Grid.Column  mobile={16} tablet={8} computer={6}>
-                        <Segment textAlign="center" basic><Icon name="phone square" size="big" />Phone</Segment>
-                        <Segment textAlign="center" basic><h3>385-229-7480</h3></Segment>
+                        <IconHeader name="phone volume" size="large" text="Phone" />
+                        <Segment textAlign="center" basic><Header as="h3" content="385-229-7480" /></Segment>
                     </Grid.Column>
                     <Grid.Column  mobile={16} tablet={8} computer={5}>
-                        <Segment textAlign="center" basic><Icon name="mail" size="big" />Email</Segment>
-                        <Segment textAlign="center" basic><h3><a  href="mailto:barranco.ike@gmail.com?subject=Email%20Regarding%20Portfolio">barranco.ike@gmail.com</a></h3></Segment>
+                        <IconHeader name="mail" size="big" text="Email" />
+                        <Segment textAlign="center" basic>
+                        <Header as="a" size="big" content="barranco.ike@gmail.com" href="mailto:barranco.ike@gmail.com?subject=Email%20Regarding%20Portfolio" color="blue" />
+                        </Segment>
                     </Grid.Column>
                 </Grid>
             </Card.Content>
