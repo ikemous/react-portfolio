@@ -1,4 +1,8 @@
 #root{
     height: 100%;
-    background-color:#d5d5d5;
+    background-color:#13293D;
+}
+
+.ui.fluid.card, .ui.card{
+    background-color: #F1BF98!important;
 }
