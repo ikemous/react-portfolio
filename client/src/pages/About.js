@@ -2,6 +2,7 @@ import React from "react";
 import EmploymentCard from "../components/aboutComponents/EmploymentCard.js";
 import AboutMeCard from "../components/aboutComponents/AboutMeCard.js";
 import {Image, Card, Container} from "semantic-ui-react";
+import "./aboutPageStyle.css";
 
 function About()
 {

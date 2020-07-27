@@ -1,7 +1,8 @@
 import React from "react";
 import {Container, Image} from "semantic-ui-react";
 import SocialList from "../components/contactComponents/SocialList.js";
-import ContactCard from "../components/contactComponents/ContactCard.js"
+import ContactCard from "../components/contactComponents/ContactCard.js";
+import "./contactPageStyle.css";
 
 function Contact()
 {

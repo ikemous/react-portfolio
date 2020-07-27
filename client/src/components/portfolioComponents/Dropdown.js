@@ -1,6 +1,7 @@
 import React from "react";
 import {Dropdown} from "semantic-ui-react";
 import {Link} from "react-router-dom";
+import "./dropDownStyle.css";
 
 const options = [
     { key: 'All', text: 'Show All', value: '' },
