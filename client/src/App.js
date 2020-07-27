@@ -12,6 +12,24 @@ function App()
   const [page, setPage] = useState();
   const [visible, setVisible] = useState(false);
   
+  useEffect(() => {
+    let firstLocation = window.location.pathname;
+    firstLocation = firstLocation.split('/')[1];
+    firstLocation = firstLocation[0].toUpperCase() + firstLocation.slice(1);
+    console.log(firstLocation);  
+    switch(firstLocation)
+    {
+      case "About":
+      case "Portfolio":
+      case "Contact":
+        setPage(firstLocation);
+        break;
+      default:
+        setPage("Page Not Found");
+        break;
+    };
+  }, []);
+
   const handleMobileClick = (pageName, visibility) => {
     setPage(pageName);
     setVisible(visibility);

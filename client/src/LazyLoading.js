@@ -1,4 +1,4 @@
-import React, {Suspense, useEffect} from "react";
+import React, {Suspense, useEffect, useState} from "react";
 import {Loader, Dimmer} from "semantic-ui-react";
 const App = React.lazy(() => import("./App.js"));
 
@@ -14,7 +14,7 @@ function LazyLoading()
                 <Loader size='large'>Loading</Loader>
             </Dimmer>
         }>
-            <App />
+            <App location={location}/>
         </Suspense>
     )
 }
