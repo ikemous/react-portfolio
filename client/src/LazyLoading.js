@@ -14,7 +14,7 @@ function LazyLoading()
                 <Loader size='large'>Loading</Loader>
             </Dimmer>
         }>
-            <App location={location}/>
+            <App />
         </Suspense>
     )
 }
