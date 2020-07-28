@@ -1,10 +1,11 @@
 import React from "react";
 import {Card, Image, Icon} from "semantic-ui-react";
+import "./projectCardStyle.css";
 
 function ProjectCard({imageRoute, title, description, skills, githubURL, deployedURL})
 {
     return (
-        <Card>
+        <Card className="projectCard">
             <Image style={{height: "290px", width: "290px"}} src={imageRoute || "https://via.placeholder.com/150"} alt={`${title} App displayed in running state`}/>
             <Card.Content>
                 <Card.Header>{title}</Card.Header>
