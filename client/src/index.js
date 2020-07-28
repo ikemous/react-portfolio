@@ -5,5 +5,5 @@ import App from "./App.js";
 import LazyLoading from "./LazyLoading.js";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<LazyLoading><App /></LazyLoading>, document.getElementById("root"));
+ReactDOM.render(<LazyLoading />, document.getElementById("root"));
 registerServiceWorker();

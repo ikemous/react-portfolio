@@ -1,7 +1,8 @@
 import React, {Suspense, useEffect} from "react";
 import {Loader, Dimmer} from "semantic-ui-react";
+const App = React.lazy(() => import("./App.js"));
 
-function LazyLoading({children})
+function LazyLoading()
 {
     useEffect(() =>{
         document.title = "Ikemous - Loading"
@@ -13,7 +14,7 @@ function LazyLoading({children})
                 <Loader size='large'>Loading</Loader>
             </Dimmer>
         }>
-            {children}
+            <App />
         </Suspense>
     )
 }
