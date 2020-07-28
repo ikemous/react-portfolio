@@ -1,3 +1,4 @@
 .socialIcon:hover{
     transform: rotate(90deg);
+    text-decoration: none;
 }
