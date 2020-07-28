@@ -8,7 +8,7 @@ const projects = [
         "title": "Burger Lover",
         "description": "Application to save and chomp on burgers",
         "skills": "Javascript, Node, Handlebars, MySQL, CSS, HTML",
-        "imageRoute": "/images/burgerLogger.jpg",
+        "imageRoute": "/images/burgerLogger.webp",
         "githubURL": "https://github.com/ikemous/burger_logger",
         "deployedURL": "https://buger-eater.herokuapp.com/"
     },
@@ -16,7 +16,7 @@ const projects = [
         "title": "Movie Lover",
         "description": "Application to Search and save movies for a list",
         "skills": "Javascript, API, Node, Handlebars, CSS, HTML, Project",
-        "imageRoute": "/images/movieLover.jpg",
+        "imageRoute": "/images/movieLover.webp",
         "githubURL": "https://github.com/Robbie2497/Project-2",
         "deployedURL": "https://projectdash.herokuapp.com/"
     },
@@ -24,7 +24,7 @@ const projects = [
         "title": "Team Generator",
         "description": "Application to generate team information and turn into an html page",
         "skills": "Javascript, Node, CSS, HTML",
-        "imageRoute": "/images/teamGenerator.jpg",
+        "imageRoute": "/images/teamGenerator.webp",
         "githubURL": "https://github.com/ikemous/GUI-team-generator",
         "deployedURL": "https://dev-team-generator.herokuapp.com/"
     },
@@ -32,7 +32,7 @@ const projects = [
         "title": "Weather",
         "description": "Application to show the weather of a desired City",
         "skills": "Javascript, CSS, HTML",
-        "imageRoute": "/images/weather.jpg",
+        "imageRoute": "/images/weather.webp",
         "githubURL": "https://github.com/ikemous/weather",
         "deployedURL": "https://ikemous.github.io/weather/"
     },
@@ -40,7 +40,7 @@ const projects = [
         "title": "Quiz",
         "description": "Javascript quiz with random created questions",
         "skills": "Javascript, CSS, HTML",
-        "imageRoute": "/images/quiz.jpg",
+        "imageRoute": "/images/quiz.webp",
         "githubURL": "https://github.com/ikemous/quiz",
         "deployedURL": "https://ikemous.github.io/quiz/"
     },
@@ -48,7 +48,7 @@ const projects = [
         "title": "Grocery List",
         "description": "Application to search for food and save it to a list for later",
         "skills": "API, Javascript, Project, CSS, HTML",
-        "imageRoute": "/images/groceryList.jpg",
+        "imageRoute": "/images/groceryList.webp",
         "githubURL": "https://github.com/fftab/Grocery-List",
         "deployedURL": "https://fftab.github.io/Grocery-List/"
     },
@@ -56,7 +56,7 @@ const projects = [
         "title": "Team Generator Console",
         "description": "Console Application to create a team html page",
         "skills": "Node, Javascript, HTML, CSS",
-        "imageRoute": "/images/teamGeneratorConsole.jpg",
+        "imageRoute": "/images/teamGeneratorConsole.webp",
         "githubURL": "https://github.com/ikemous/teamGenerator",
         "deployedURL": ""
     },
@@ -64,7 +64,7 @@ const projects = [
         "title": "Employee Tracker",
         "description": "Console Application to track employee information",
         "skills": "Node, MySql, Javascript",
-        "imageRoute": "/images/employeeTracker.jpg",
+        "imageRoute": "/images/employeeTracker.webp",
         "githubURL": "https://github.com/ikemous/employee-tracker",
         "deployedURL": ""
     },
@@ -72,15 +72,12 @@ const projects = [
         "title": "Read Me Generator",
         "description": "Console Application to create readme file",
         "skills": "Node, Javascript",
-        "imageRoute": "/images/readmeGenerator.jpg",
+        "imageRoute": "/images/readmeGenerator.webp",
         "githubURL": "https://github.com/ikemous/read-me-generator",
         "deployedURL": ""
     },
     
 ];
-/** 
-
- */
 
 db.Project.deleteMany({})
 .then(() => db.Project.collection.insertMany(projects))
