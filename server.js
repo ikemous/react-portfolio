@@ -35,8 +35,8 @@ server.get("*", function(req, res) {
 
 server.use(enforce.HTTPS());
  
-http.createServer(server).listen(server.get('port'), function() {
-    console.log('Express server listening on port ' + server.get('port'));
+http.createServer(server).listen(PORT, function() {
+    console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
 // server.listen(PORT, function() {
 //   console.log(`🌎 ==> API server now on port ${PORT}!`);
