@@ -1,4 +1,6 @@
 const express = require("express");
+const http = require('http');
+const enforce = require('express-sslify');
 const compression = require("compression");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -31,6 +33,11 @@ server.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-server.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+server.use(enforce.HTTPS());
+ 
+http.createServer(server).listen(server.get('port'), function() {
+    console.log('Express server listening on port ' + server.get('port'));
 });
+// server.listen(PORT, function() {
+//   console.log(`🌎 ==> API server now on port ${PORT}!`);
+// });
