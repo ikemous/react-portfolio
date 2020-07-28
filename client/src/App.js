@@ -15,18 +15,21 @@ function App()
   useEffect(() => {
     let firstLocation = window.location.pathname;
     firstLocation = firstLocation.split('/')[1];
-    firstLocation = firstLocation[0].toUpperCase() + firstLocation.slice(1);
-    switch(firstLocation)
+    if(firstLocation)
     {
-      case "About":
-      case "Portfolio":
-      case "Contact":
-        setPage(firstLocation);
-        break;
-      default:
-        setPage("Page Not Found");
-        break;
-    };
+      firstLocation = firstLocation[0].toUpperCase() + firstLocation.slice(1);
+      switch(firstLocation)
+      {
+        case "About":
+        case "Portfolio":
+        case "Contact":
+          setPage(firstLocation);
+          break;
+        default:
+          setPage("Page Not Found");
+          break;
+      };
+    }
   }, []);
 
   const handleMobileClick = (pageName, visibility) => {
@@ -50,12 +53,3 @@ function App()
 }
 
 export default App;
-
-
-/**
- * USED TO PUSH ITEMS TO THE SIDE
- * $('.ui.sidebar')
-  .sidebar('toggle')
-;
-
- */
