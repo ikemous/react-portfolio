@@ -14,12 +14,12 @@ function Portfolio()
     useEffect(() => {
         document.title = "Ikemous - Portfolio"
     });
-    
+
     useEffect(() => {
         let query = filter;
         
         if(filterParam)
-            query = filterParam
+            query = filterParam;
 
         API.getProjects(query)
         .then(collections => {
