@@ -21,7 +21,3 @@ nav button{
 .pushable{
     padding-bottom: 50px!important;
 }
-
-body ::-webkit-scrollbar-thumb{
-    background-color:#4183c4!important
-}
