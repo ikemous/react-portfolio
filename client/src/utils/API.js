@@ -4,8 +4,8 @@ export default {
     getProjects(filter)
     {
         if(filter)
-            return axios.get(`/portfolio/${filter}`);
-        return axios.get("/portfolio");
+            return axios.get(`/project/${filter}`);
+        return axios.get("/project");
     }
 
 } 
