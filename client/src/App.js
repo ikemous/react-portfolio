@@ -23,13 +23,12 @@ function App()
         case "About":
         case "Portfolio":
         case "Contact":
-          setPage(firstLocation);
-          break;
+          return setPage(firstLocation);
         default:
-          setPage("Page Not Found");
-          break;
+          return setPage("Page Not Found");
       };
     }
+    return setPage("About");
   }, []);
 
   const handleMobileClick = (pageName, visibility) => {
