@@ -1,5 +1,4 @@
 const express = require("express");
-const sslRedirect = require('heroku-ssl-redirect');
 const compression = require("compression");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -23,11 +22,6 @@ mongoose.connection.on('connected', () => {
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
 
-server.use(sslRedirect([
-  'development',
-  'production'
-]));
-server.use(sslRedirect(['production'], 301));
 server.use(compression());
 server.use(projectRoutes);
 
