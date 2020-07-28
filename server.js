@@ -1,4 +1,5 @@
 const express = require("express");
+const sslRedirect = require('heroku-ssl-redirect');
 const compression = require("compression");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -22,8 +23,13 @@ mongoose.connection.on('connected', () => {
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
 
+server.use(sslRedirect([
+  'development',
+  'production'
+  ]));
 server.use(compression());
 server.use(projectRoutes);
+
 
 // Send every request to the React app
 // Define any API routes before this runs
