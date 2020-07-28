@@ -7,11 +7,18 @@ nav{
 nav button{
     background-color:#4183c4!important;
 }
+
+nav a:hover {
+    position: relative;
+    top: 5px;
+    text-decoration: none;
+}
+
 .navItem, nav h1{
     color: #4183c4!important;
 }
 .nav-item.active{
-    font-size: 17px!important;
+    font-size: 19px!important;
 }
 
 .ui.fluid.card, .ui.card{
