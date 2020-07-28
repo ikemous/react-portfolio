@@ -1,22 +1,20 @@
-import React, {useEffect} from "react";
+import React, {useEffect, Suspense} from "react";
 import EmploymentCard from "../components/aboutComponents/EmploymentCard.js";
 import AboutMeCard from "../components/aboutComponents/AboutMeCard.js";
 import {Image, Card, Container} from "semantic-ui-react";
 import "./aboutPageStyle.css";
+const AboutContents = React.lazy(() => import("../components/aboutComponents/AboutContents.js"));
 
 function About()
 {
     useEffect(() =>{
         document.title = "Ikemous - About"
     });
+
     return (
-        <Container>
-            <Image src='/images/ikeMotorcyle.webp' size='medium' alt="Ikemous posing for his portfolio page" circular centered/>
-            <Card.Group>
-                <AboutMeCard />
-                <EmploymentCard />  
-            </Card.Group>
-        </Container>
+        <Suspense fallback={<h1>Test</h1>}>
+            <AboutContents />
+        </Suspense>
     )
 };
 
