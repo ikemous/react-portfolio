@@ -26,7 +26,8 @@ server.use(express.json());
 server.use(sslRedirect([
   'development',
   'production'
-  ]));
+]));
+server.use(sslRedirect(['production'], 301));
 server.use(compression());
 server.use(projectRoutes);
 
