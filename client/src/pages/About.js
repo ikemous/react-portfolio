@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
+import AboutMeCard from "../components/aboutComponents/AboutMeCard.js";
+import EmploymentCard from "../components/aboutComponents/EmploymentCard.js";
 import {Image, Card, Container} from "semantic-ui-react";
 import "./aboutPageStyle.css";
-const AboutMeCard = React.lazy(() => import("../components/aboutComponents/AboutMeCard.js"));
-const EmploymentCard = React.lazy(() => import("../components/aboutComponents/EmploymentCard.js"));
 
 function About()
 {
