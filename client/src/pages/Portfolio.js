@@ -32,7 +32,7 @@ function Portfolio()
     return (
         <Container>
             <Dropdown setFilter={setFilter}/>
-            <Card.Group>
+            <Card.Group centered>
                 {(projects)?projects.map(project => <ProjectCard key={project._id} {...project} />):<h2>No Projects Found</h2>}
             </Card.Group>
         </Container>

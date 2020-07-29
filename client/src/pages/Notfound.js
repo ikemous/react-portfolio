@@ -1,9 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import {Segment} from "semantic-ui-react";
 
 function NotFound()
 {
+    useEffect(() =>{
+        document.title = "Ikemous - Page Not Found"
+    }, []);
+
     return (
         <Segment textAlign="center" basic style={{color: "#4183c4"}}>
             <h2><span role="img" aria-label="crying">😭</span> Page Not Found <span role="img" aria-label="crying">😭</span></h2>
