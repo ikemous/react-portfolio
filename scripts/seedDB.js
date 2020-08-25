@@ -5,6 +5,14 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/projects");
 
 const projects = [
     {
+        "title": "HALP",
+        "description": "Ticketing system to create and track workflow",
+        "skills": "React, Node, MongoDB, CSS, HTML, CSS, Project",
+        "imageRoute": "/images/halp.webp",
+        "githubURL": "https://github.com/Lancasting/Final-Project",
+        "deployedURL": "https://halp-me.herokuapp.com/"
+    },
+    {
         "title": "Burger Lover",
         "description": "Application to save and chomp on burgers",
         "skills": "Javascript, Node, Handlebars, MySQL, CSS, HTML",
